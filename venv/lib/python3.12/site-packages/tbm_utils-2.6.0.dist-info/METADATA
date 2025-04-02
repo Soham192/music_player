@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: tbm-utils
+Version: 2.6.0
+Summary: A commonly-used set of utilities used by me (thebigmunch).
+Home-page: https://github.com/thebigmunch/tbm-utils
+License: MIT
+Author: thebigmunch
+Author-email: mail@thebigmunch.me
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: dev
+Provides-Extra: doc
+Provides-Extra: lint
+Provides-Extra: test
+Requires-Dist: attrs (>=18.2,<19.4)
+Requires-Dist: coverage[toml] (>=4.5,<6.0); extra == "dev" or extra == "test"
+Requires-Dist: flake8 (>=3.5,<4.0); extra == "dev" or extra == "lint"
+Requires-Dist: flake8-builtins (>=1.0,<2.0); extra == "dev" or extra == "lint"
+Requires-Dist: flake8-comprehensions (>=2.0,<=4.0); extra == "dev" or extra == "lint"
+Requires-Dist: flake8-import-order (>=0.18,<0.19); extra == "dev" or extra == "lint"
+Requires-Dist: flake8-import-order-tbm (>=1.0,<2.0); extra == "dev" or extra == "lint"
+Requires-Dist: nox (>=2019,<2020); extra == "dev" or extra == "test"
+Requires-Dist: pendulum (>=2.0,<=3.0,!=2.0.5,!=2.1.0)
+Requires-Dist: pprintpp (<1.0.0)
+Requires-Dist: pytest (>=4.0,<6.0); extra == "dev" or extra == "test"
+Requires-Dist: sphinx (>=2.0,<3.0); extra == "dev" or extra == "doc"
+Requires-Dist: sphinx-material (<1.0.0); extra == "dev" or extra == "doc"
+Requires-Dist: wrapt (>=1.0,<2.0)
+Project-URL: Repository, https://github.com/thebigmunch/tbm-utils
+Description-Content-Type: text/markdown
+
+# tbm-utils.py
+
+[![PyPI](https://img.shields.io/pypi/v/tbm-utils.svg?label=PyPI)](https://pypi.org/project/tbm-utils/)
+![](https://img.shields.io/badge/Python-3.6%2B-blue.svg)  
+[![GitHub CI](https://img.shields.io/github/workflow/status/thebigmunch/tbm-utils/CI?label=GitHub%20CI)](https://github.com/thebigmunch/tbm-utils/actions?query=workflow%3ACI)
+[![Codecov](https://img.shields.io/codecov/c/github/thebigmunch/tbm-utils.svg?label=Codecov)](https://codecov.io/gh/thebigmunch/tbm-utils)  
+[![Docs - Stable](https://img.shields.io/readthedocs/tbm-utils/stable.svg?label=Docs%20%28Stable%29)](https://tbm-utils.readthedocs.io/en/stable/)
+[![Docs - Latest](https://img.shields.io/readthedocs/tbm-utils/latest.svg?label=Docs%20%28Latest%29)](https://tbm-utils.readthedocs.io/en/latest/)
+
+[tbm-utils](https://github.com/thebigmunch/tbm-utils) is a commonly-used set of utilities used by me (thebigmunch).
+
+
+## Installation
+
+``pip install -U tbm-utils``
+
+
+## Usage
+
+For the release version, see the [stable docs](https://tbm-utils.readthedocs.io/en/stable/).  
+For the development version, see the [latest docs](https://tbm-utils.readthedocs.io/en/latest/).
+
+
+## Appreciation
+
+Showing appreciation is always welcome.
+
+#### Thank
+
+[![Say Thanks](https://img.shields.io/badge/thank-thebigmunch-blue.svg?style=flat-square)](https://saythanks.io/to/thebigmunch)
+
+Get your own thanks inbox at [SayThanks.io](https://saythanks.io/).
+
+#### Contribute
+
+[Contribute](https://github.com/thebigmunch/tbm-utils/blob/master/.github/CONTRIBUTING.md) by submitting bug reports, feature requests, or code.
+
+#### Help Others/Stay Informed
+
+[Discourse forum](https://forum.thebigmunch.me/)
+
+#### Referrals/Donations
+
+[![Digital Ocean](https://img.shields.io/badge/Digital_Ocean-referral-orange.svg?style=flat-square)](https://bit.ly/DigitalOcean-tbm-referral) [![Namecheap](https://img.shields.io/badge/Namecheap-referral-orange.svg?style=flat-square)](http://bit.ly/Namecheap-tbm-referral) [![PayPal](https://img.shields.io/badge/PayPal-donate-brightgreen.svg?style=flat-square)](https://bit.ly/PayPal-thebigmunch)
+
