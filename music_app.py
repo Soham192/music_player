@@ -8,7 +8,7 @@ import os
 import time
 import sqlite3
 import hashlib
-
+#git checkout new-branch-name
 # Define database paths and structure
 DB_PATH = os.path.join(os.path.expanduser("~"), "music_player.db")
 MUSIC_ROOT = os.path.join(os.path.expanduser("~"), "Music")  # Default music folder
