@@ -468,32 +468,32 @@ song_duration = "00:00"
 
 # Initializing the parent window of the GUI
 root = Tk()
-root.geometry('700x270')
+root.geometry('1920x1200')
 root.title('My Music Player')
 root.resizable(False, False)
 
 # Creating the frames of the music player
-song_frame = LabelFrame(root, text="Current song", bg='LightBlue', width=506, height=90)
-song_frame.place(x=0, y=0)
+song_frame = LabelFrame(root, text="Current song", bg='LightBlue', width=1400, height=150)
+song_frame.place(x=10, y=10)
 
-button_frame = LabelFrame(root, text="Control Buttons", bg='Turquoise', width=506, height=160)
-button_frame.place(y=90)
+button_frame = LabelFrame(root, text="Control Buttons", bg='Turquoise', width=1400, height=250)
+button_frame.place(x=10, y=170)
 
-listbox_frame = LabelFrame(root, text='Playlist', bg="RoyalBlue", height=200, width=300)
-listbox_frame.place(x=505, y=0)
+listbox_frame = LabelFrame(root, text='Playlist', bg="RoyalBlue", height=900, width=500)
+listbox_frame.place(x=1420, y=10)
 
-volume_frame = LabelFrame(root, text="Volume", bg="Turquoise")
-volume_frame.place(x=400, y=100)
+volume_frame = LabelFrame(root, text="Volume", bg="Turquoise", width=150, height=300)
+volume_frame.place(x=1250, y=300)
 
-duration_frame = Label(root, bg='pink', text='Time Elapsed: 00:00 / 00:00', bd=2, relief=GROOVE, width=28, height=2, font=('Times', 10, 'bold'))
-duration_frame.place(x=505, y=214)
+duration_frame = Label(root, bg='pink', text='Time Elapsed: 00:00 / 00:00', bd=2, relief=GROOVE, width=40, height=3, font=('Times', 14, 'bold'))
+duration_frame.place(x=1420, y=1100)
 
 # StringVar is used to manipulate text in entry, labels
 current_song = StringVar(root, value='<Not selected>')
 song_status = StringVar(root, value='<Not Available>')
 
 # Playlist Listbox
-playlist = Listbox(listbox_frame, font=('Helvetica', 11), selectbackground='Gold')
+playlist = Listbox(listbox_frame, font=('Helvetica', 14), selectbackground='Gold', height=40, width=60)
 
 # Make the scroll bar to scroll the playlist
 scroll_bar = Scrollbar(listbox_frame, orient=VERTICAL)
@@ -501,43 +501,43 @@ scroll_bar.pack(side=RIGHT, fill=BOTH)
 scroll_bar.config(command=playlist.yview)
 
 playlist.config(yscrollcommand=scroll_bar.set)
-playlist.pack(fill=BOTH, padx=5, pady=5)
+playlist.pack(fill=BOTH, padx=10, pady=10)
 
 # SongFrame labels
-Label(song_frame, text="CURRENTLY PLAYING: ", bg="LightBlue", font=('Times', 10, 'bold')).place(x=5, y=20)
+Label(song_frame, text="CURRENTLY PLAYING: ", bg="LightBlue", font=('Times', 14, 'bold')).place(x=20, y=40)
 
-song_lbl = Label(song_frame, textvariable=current_song, font=('Times', 12), bg='GoldenRod')
-song_lbl.place(x=150, y=20)
+song_lbl = Label(song_frame, textvariable=current_song, font=('Times', 16), bg='GoldenRod')
+song_lbl.place(x=250, y=40)
 
 # Buttons in the main screen
-pause_btn = Button(button_frame, text="Pause", bg='Aqua', font=('Georgia', 13), width=7, command=lambda: pause_song(song_status))
-pause_btn.place(x=15, y=20)
+pause_btn = Button(button_frame, text="Pause", bg='Aqua', font=('Georgia', 14), width=10, command=lambda: pause_song(song_status))
+pause_btn.place(x=50, y=50)
 
-stop_btn = Button(button_frame, text="Stop", bg='Aqua', font=("Georgia", 13), width=7, command=lambda: stop_song(song_status))
-stop_btn.place(x=105, y=20)
+stop_btn = Button(button_frame, text="Stop", bg='Aqua', font=("Georgia", 14), width=10, command=lambda: stop_song(song_status))
+stop_btn.place(x=250, y=50)
 
-play_btn = Button(button_frame, text="Play", bg='Aqua', font=("Georgia", 13), width=7, command=lambda: play_song(current_song, playlist, song_status))
-play_btn.place(x=195, y=20)
+play_btn = Button(button_frame, text="Play", bg='Aqua', font=("Georgia", 14), width=10, command=lambda: play_song(current_song, playlist, song_status))
+play_btn.place(x=450, y=50)
 
-resume_btn = Button(button_frame, text='Resume', bg="Aqua", font=("Georgia", 13), width=7, command=lambda: resume_song(song_status))
-resume_btn.place(x=285, y=20)
+resume_btn = Button(button_frame, text='Resume', bg="Aqua", font=("Georgia", 14), width=10, command=lambda: resume_song(song_status))
+resume_btn.place(x=650, y=50)
 
 # Database buttons
-db_btn = Button(button_frame, text="Load Library", bg='Aqua', font=("Georgia", 13), width=15, command=lambda: load_songs(playlist, song_status))
-db_btn.place(x=10, y=75)
+db_btn = Button(button_frame, text="Load Library", bg='Aqua', font=("Georgia", 14), width=18, command=lambda: load_songs(playlist, song_status))
+db_btn.place(x=50, y=150)
 
-dir_btn = Button(button_frame, text="Add Music Folder", bg='Aqua', font=("Georgia", 13), width=15, command=lambda: change_music_directory(song_status))
-dir_btn.place(x=170, y=75)
+dir_btn = Button(button_frame, text="Add Music Folder", bg='Aqua', font=("Georgia", 14), width=18, command=lambda: change_music_directory(song_status))
+dir_btn.place(x=350, y=150)
 
-playlist_btn = Button(button_frame, text="Playlists", bg='Aqua', font=("Georgia", 13), width=11, command=show_playlists)
-playlist_btn.place(x=330, y=75)
+playlist_btn = Button(button_frame, text="Playlists", bg='Aqua', font=("Georgia", 14), width=12, command=show_playlists)
+playlist_btn.place(x=650, y=150)
 
 # Control the volume of the song
-volume_slider = Scale(volume_frame, from_=100, to=0, orient=VERTICAL, command=volume, length=110, bg='orange', cursor='hand2')
+volume_slider = Scale(volume_frame, from_=100, to=0, orient=VERTICAL, command=volume, length=250, bg='orange', cursor='hand2')
 volume_slider.set(30)
 volume_slider.pack()
 
-Label(root, textvariable=song_status, bg='SteelBlue', font=('Times', 8), justify=LEFT).pack(side=BOTTOM, fill=X)
+Label(root, textvariable=song_status, bg='SteelBlue', font=('Times', 12), justify=LEFT).pack(side=BOTTOM, fill=X)
 
 # Load songs from the database on startup
 load_songs(playlist, song_status)
